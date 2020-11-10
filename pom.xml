@@ -8,10 +8,18 @@
     <artifactId>genius-common</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+        </dependency>
+    </dependencies>
+
     <distributionManagement>
         <repository>
             <id>genuis-maven-repo</id>
-            <url>file:C:\\Users\\yitu\\Desktop\\genius-maven-repo\\repository\\</url>
+            <url>file:C:\\Users\\wang\\genius-maven-repo\\repository\\</url>
         </repository>
     </distributionManagement>
 

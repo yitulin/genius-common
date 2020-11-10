@@ -1,33 +1,36 @@
 package com.yitu.genius.common;
 
+import lombok.Data;
+
 /**
  * @Author: ⚡
  * @Description:
  * @Date: Created in 2020-09-07 下午 07:09
  * Modified By:
  */
-public class ResultVO<T> {
+@Data
+public class ResultDTO<T> {
 
     private boolean success;
     private T data;
     private String errorMessage;
 
-    public ResultVO(T data) {
+    public ResultDTO(T data) {
         this.data = data;
         this.success=true;
     }
 
-    public ResultVO(String errorMessage) {
+    public ResultDTO(String errorMessage) {
         this.errorMessage = errorMessage;
         this.success=false;
     }
 
-    public static <T> ResultVO<T> success(T data){
-        return new ResultVO<T>(data);
+    public static <T> ResultDTO<T> success(T data){
+        return new ResultDTO<T>(data);
     }
 
-    public static <T> ResultVO<T> fail(String errorMessage){
-        return new ResultVO<T>(errorMessage);
+    public static <T> ResultDTO<T> fail(String errorMessage){
+        return new ResultDTO<T>(errorMessage);
     }
 
 }
